@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.text.DecimalFormat;
+
 public class HelloController {
     @FXML
     private Label labArea;
@@ -20,8 +22,10 @@ public class HelloController {
     SimpleIntegerProperty a = new SimpleIntegerProperty();
     SimpleIntegerProperty b = new SimpleIntegerProperty();
     public void initialize(){
-        txtA.setOnAction(ActionEvent -> a.set(Integer.parseInt(txtA.getText())));
-        txtB.setOnAction(ActionEvent -> b.set(Integer.parseInt(txtB.getText())));
+        //txtA.setOnAction(ActionEvent -> a.set(Integer.parseInt(txtA.getText())));
+        //txtB.setOnAction(ActionEvent -> b.set(Integer.parseInt(txtB.getText())));
+        txtA.textProperty().bindBidirectional(a, new DecimalFormat());
+        txtB.textProperty().bindBidirectional(b, new DecimalFormat());
         a.addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
