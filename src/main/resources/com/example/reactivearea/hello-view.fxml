@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:controller="com.example.reactivearea.HelloController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="229.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="txtA" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="149.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
+      <TextField fx:id="txtB" layoutX="14.0" layoutY="58.0" AnchorPane.leftAnchor="14.0" />
+      <Label layoutX="175.0" layoutY="18.0" text="a" />
+      <Label layoutX="175.0" layoutY="62.0" text="b" />
+      <Label fx:id="labArea"  layoutX="75.0" layoutY="94.0" prefHeight="17.0" prefWidth="43.0" text="Area:" />
+   </children>
+</AnchorPane>
